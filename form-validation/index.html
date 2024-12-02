@@ -30,20 +30,37 @@
             id="uname"
             minlength="5"
             maxlength="20"
+            pattern="[a-z].[a-z]{3,}"
             required
           />
         </li>
         <li>
           <label for="email">Email address:</label>
-          <input type="email" name="email" id="email" required />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            pattern="(?:[a-z]|[0-9])+@bigcorp.eu"
+          />
         </li>
         <li>
           <label for="phone">Phone number:</label>
-          <input type="tel" name="phone" id="phone" maxlength="15" required />
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            pattern="\d{10}||\d{3}([' '.-])\d{3}\1\d{4}"
+            required
+          />
         </li>
         <li>
           <label for="comment">Comment:</label>
-          <textarea name="comment" id="comment" maxlength="200"> </textarea>
+          <textarea
+            name="comment"
+            id="comment"
+            maxlength="200"
+          >
+          </textarea>
         </li>
         <li>
           <button>Submit comment</button>
